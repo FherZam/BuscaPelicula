@@ -45,6 +45,15 @@
             <img :src="movieData.Poster" :alt="movieData.imdbID">
         </div>
 
+        <div class="container" style="text-align: left;">
+            <ul>
+                <li v-for="movie in movies">
+                    <button class="btnSubmit" @click="BuscarTitulo(movie.Title)">Ver </button><label>{{ movie.Title }}</label>
+                </li>
+
+            </ul>    
+        </div>
+        <!-- {{ movies }} -->
     </div>
 
     <script src="./load.js"></script>
